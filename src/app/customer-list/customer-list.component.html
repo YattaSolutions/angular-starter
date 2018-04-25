@@ -1,0 +1,31 @@
+<h2>Kundenliste</h2>
+
+<input type="text" [(ngModel)]="searchTerm" placeholder="Suchbegriff" />
+<button (click)="reload(searchTerm)" value="Laden">Kunden suchen</button>
+
+<h4 ng-if="errorMsg">{{errorMsg}}</h4>
+
+<p ng-if="customers.length > 0">
+  Die Suche lieferte {{customers.length}} Ergebnisse.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Kundennr.</th>
+      <th>K&auml;fe</th>
+      <th>Aktion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers; let i = index">
+      <td>{{i +1}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.customerId}}</td>
+      <td>{{customer.numPurchases}}</td>
+      <td>(<a routerLink='/detail/{{customer.customerId}}' routerLinkActive="active">Details</a>)</td>
+    </tr>
+  </tbody>
+</table>
