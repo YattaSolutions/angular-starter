@@ -1,6 +1,16 @@
 # angular-starter
 A very basic example on how to build a web client with Angular 5 that consumes data from a RESTful web service.
 
+## Prerequisites
+* You need [npm](https://npmjs.com/) installed on you machine
+* install the npm module *ng*
+
+## Usage
+* to launch the app, call `ng serve` from you project's root directory
+  * use `--open` to let `ng` open your browser automatically
+  * the default port is 4200, use `--port` to specify a custom port
+
+
 
 ## Angular CLI readme
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
